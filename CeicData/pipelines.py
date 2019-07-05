@@ -12,7 +12,8 @@ import pickle
 
 class CeicdataPipeline(object):
     def process_item(self, item, spider):
-        db = pymysql.connect("localhost","root","root","ceicdata",charset='utf8')
+        # db = pymysql.connect("localhost","root","root","ceicdata",charset='utf8')
+        db = pymysql.connect("mysqlserver","ceicdata","aU13#25cPl371","ceicdata",charset='utf8')
         #首先查找hash值是否存在
         hashstr = base64.b64encode(pickle.dumps(item))
         cursor = db.cursor()
