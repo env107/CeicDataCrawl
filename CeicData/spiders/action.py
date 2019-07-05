@@ -31,9 +31,10 @@ class action(scrapy.Spider):
             yield dataItem
         pass
 
-       
         
         self.show_time("数据解析结束!")
+        print("<<Python3 Crawl Parse Script for news.ceic.ac.cn ",str(time.strftime("%Y-%m-%d %H:%M",time.localtime())))
+        print("")
 
     def show_time(self,text):
         print ("#",str(time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())),"-> ",text)
