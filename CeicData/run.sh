@@ -2,7 +2,7 @@
 
 echo "开始进行爬虫..."
 #/home/admin/python/CeicDataCrawl/CeicData
-time=`date +%Y%m%d%H%i%s`
+time=`date +%Y%m%d%H%I%S`
 py3=`which python3`
 $py3 /home/admin/python/CeicDataCrawl/CeicData/main.py > log/pull_$time.log
 
