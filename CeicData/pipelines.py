@@ -20,9 +20,7 @@ class CeicdataPipeline(object):
         checkSql = 'SELECT count(`hash`) as length FROM `current_data` WHERE `hash`=%s'
         cursor.execute(checkSql,(hashstr))
         checkData = cursor.fetchone()
-        if(checkData[0] > 0 ):
-            print("该数据已经存在,无需再记录!")
-        else:
+        if(checkData[0] < 1 ):
             print("开始写入数据")
             print(item)
             #写入数据库
